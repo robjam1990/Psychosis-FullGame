@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="desktop.ini" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Psychosis.GameState">
       <Static>True</Static>
     </Using>

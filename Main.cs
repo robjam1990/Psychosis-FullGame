@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 // File: Main.cs
 
@@ -18,6 +17,7 @@ public class Main : MonoBehaviour
             }
         }
     };
+    private object output;
 
     // Start is called before the first frame update
     // Method to start the game
@@ -30,6 +30,7 @@ public class Main : MonoBehaviour
 
         while (true)
         {
+            Update("input");
             Console.Write("Enter your choice (left/right) or type 'quit' to exit: ");
             string? input = Console.ReadLine()?.ToLower();
 
@@ -53,12 +54,21 @@ public class Main : MonoBehaviour
         }
     }
 
+    private static void Update(string v)
+    {
+        throw new NotImplementedException();
+    }
+
     // Update is called once per frame
-    void Update()
+    object Update()
     {
         // Main game loop logic here
         // This might involve waiting for player input, processing player actions, updating the game state, etc.
-        string input = Console.ReadLine();
-        string output = Console.WriteLine("Main: " + output);
+        string input = Console.ReadLine()!;
+        return output;
     }
+}
+
+public class MonoBehaviour
+{
 }
